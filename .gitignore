@@ -24,3 +24,13 @@ hs_err_pid*
 target/*.*
 
 .DS_Store
+target/classes/META-INF/APP_JsfJpaCrud.dbschema
+target/classes/META-INF/MANIFEST.MF
+target/classes/META-INF/persistence.xml
+target/surefire-reports/TEST-com.iknow.crud.app.ProductTest.xml
+target/surefire-reports/com.iknow.crud.app.ProductTest.txt
+target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst
+target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst
+target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+target/maven-archiver
+target/maven-status
