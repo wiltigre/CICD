@@ -19,7 +19,7 @@
         </head>
         <body>
             <h:form>
-                <h1><h:outputText value="Hola Mundo - SIS 313 - Hoy es 1/Noviembre" /></h1>
+                <h1><h:outputText value="Hola Mundo!!" /></h1>
                 <br/>
                 <h:commandLink action="#{product.listSetup}" value="All Product Items" id="linkProds" />
                 <br/>
