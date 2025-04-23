@@ -1,0 +1,24 @@
+pipeline {
+    agent any
+    tools {
+        maven "MVN_339"
+    }
+
+    stages {
+        stage('Github') {
+            steps {
+                git branch: 'main', url: 'https://github.com/gpalabral/CICD.git'
+            }
+        }
+        stage('Clean Compile'){
+            steps{
+                sh 'mvn clean compile'    
+            }    
+        }
+        stage('Package'){
+            steps{
+                sh 'mvn package'    
+            }    
+        }
+    }
+}
