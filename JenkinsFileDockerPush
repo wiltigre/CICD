@@ -1,0 +1,39 @@
+pipeline {
+    agent any
+    tools {
+        maven "MVN_339"
+    }
+
+    stages {
+        stage('Github') {
+            steps {
+                git branch: 'main', url: 'https://github.com/gpalabral/CICD.git'
+            }
+        }
+        stage('Clean Compile'){
+            steps{
+                sh 'mvn clean compile'    
+            }  
+        }
+        stage('Package'){
+            steps{
+                sh 'mvn package'    
+            }     
+        }
+        stage('Build Docker image'){
+            steps{
+                sh 'docker build -t gustavopalabral/cicddockerimage .'
+            }     
+        }
+        stage('Push image to Docker Hub'){
+            steps{
+                script{
+                    withCredentials([string(credentialsId: 'dockerhubpwd', variable: 'dockerhubpwd')]) {
+                        sh 'docker login -u gustavopalabral -p ${dockerhubpwd} docker.io'
+                    }
+                    sh 'docker push gustavopalabral/cicddockerimage'
+                }
+            }
+        }
+    }
+}
