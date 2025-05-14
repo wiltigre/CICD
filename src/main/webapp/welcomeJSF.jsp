@@ -19,9 +19,9 @@
         </head>
         <body>
             <h:form>
-                <h1><h:outputText value="Hola Mundo!!" /></h1>
+                <h1><h:outputText value="Hola Mundo!! - Hoy es 13 de Mayo de 2025 8:59pm" /></h1>
                 <br/>
-                <h:commandLink action="#{product.listSetup}" value="All Product Items" id="linkProds" />
+                <h:commandLink action="#{product.listSetup}" value="Todos los Productos" id="linkProds" />
                 <br/>
                 <h:commandLink action="#{product.listSetup}" value="All Categories Items" id="linkCats" />
 
