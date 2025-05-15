@@ -18,7 +18,7 @@ public class Product implements Serializable {
     @Id
     @Basic(optional = false)
     @Column(name = "PRODUCT_ID")
-    private Integer productId;
+    private Integer productId
     @Column(name = "PURCHASE_COST")
     private BigDecimal purchaseCost;
     @Column(name = "QUANTITY_ON_HAND")
